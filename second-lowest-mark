@@ -1,8 +1,26 @@
-Given the student names and their respective marks, print the name of student(s) 
-having the second lowest mark in alphabetical order.
-Student Mark
-Harry 39.51
-Berry 39.21
-Tina 37.2
-Akriti 37.2
-Harsh 29
+
+namelist = ['Harry','Berry','Tina','Akriti','Harsh']
+markList = [39.51,39.21,37.2,37.2,29]
+pairing=list(zip(namelist,markList))
+print(pairing)
+i = 0 
+x = 0
+largest = max(markList)
+scndlargest = 0
+#print(largest)
+smallest = min(markList)
+#print(smallest)
+for x in range(len(markList)):
+  
+    if markList[x] > smallest and markList[x] < largest:
+        scndlargest = markList[x]
+       # print(scndlargest)
+       # print (pairing[x])
+    
+for y in range(len(markList)):
+    if markList[y] == scndlargest:
+        print(pairing[y])
+    
+    
+
+    
